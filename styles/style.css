@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+:root{
+    --cinza-claro: #F2F2F2;
+    --cinza: #9A9A9D;
+    --verde: #4ECB18;
+    --verde-escouro: #3f9c17;
+    --tamanho-input: 50px;
+
+    --largura-login: 35px;
+
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+main {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cinza-claro);
+    height: 100vh;
+    width: 100vw;
+}
+
+.cima{
+    position: relative;
+    width: 100vw;
+    height: 90vw;
+    background-color: white;
+    border-radius:0px 0px 30px 30px;
+}
+
+.cima>img{
+    width: 170px;
+    height: 170px;
+    position: absolute;
+    border-radius: 50%;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cima button{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--verde);
+    font-size: 1.1em;
+    width: 80px;
+    transition: .3s;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cima button#login{
+    position: absolute;
+    bottom: 0;
+    left: var(--largura-login);
+}
+
+.cima button#singup{
+    border-bottom: 2px solid transparent;
+    position: absolute;
+    
+    text-align: center;
+    bottom: 0;
+    right: var(--largura-login);
+}
+
+.cima button#singup:hover{
+    border-bottom: 2px solid var(--verde);
+}
+
+.login{
+    height: calc(100% - 90vw);
+    font-size: .9em;
+    text-align: center;
+}
+
+.login form{
+    width: 100vw;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+}
+
+.login label{
+    position: absolute;
+    display: none;
+}
+
+.login input{
+    margin: 10px;
+    width: 100%;
+    height: var(--tamanho-input);
+    font-size: 1.2em;
+
+    border: none;
+    border-bottom: 1px solid var(--cinza);
+    position: relative;
+    transform: translate(-10px);
+    outline: 0;
+
+    background-color: transparent;
+}
+
+.login input::placeholder{
+    font-size: .8em;
+}
+
+.login input:focus{
+    border-bottom: 2px solid var(--cinza);
+}
+
+.login a{
+    text-decoration: none;
+    color: var(--verde);
+    transition: .5s;
+}
+
+.login a:hover{
+    color: var(--verde-escouro);
+}
+
+.login button{
+    width: 100%;
+    height: 50px;
+    border-radius: 20px;
+    background-color: var(--verde);
+    border: none;
+    color: white;
+    transition: .4s;
+}
+
+.login button:hover{
+    background-color: var(--verde-escouro);
+    cursor: pointer;
+}
