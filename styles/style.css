@@ -172,7 +172,7 @@
 @media screen and (600px <= width) {
     body{
         background-image: linear-gradient(to right, var(--verde) 15%, var(--verde-claro) 85%);
-    }
+    }/*calcio*/
 
     main{
         width: 80vw;
