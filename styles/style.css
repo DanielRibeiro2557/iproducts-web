@@ -1,7 +1,8 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&display=swap');
 
 :root{
-    --cinza-claro: #F2F2F2;
+    --cinza-claro: #ececec;
     --cinza: #9A9A9D;
     --verde: #4ECB18;
     --verde-escouro: #3f9c17;
@@ -9,6 +10,10 @@
 
     --tamanho-input: 50px;
     --largura-login: 35px;
+
+    --fonte: "M PLUS 1", 'Seoge UI', sans-serif;
+
+    --borda: 30px;
 
 }
 
@@ -22,6 +27,7 @@
     body{
         width: 100vw;
         height: 100vh;
+        font-family: var(--fonte);
     }
 
     h1{
@@ -29,7 +35,6 @@
     }
 
     main {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         background-color: var(--cinza-claro);
         height: 100vh;
         width: 100vw;
@@ -42,7 +47,7 @@
         width: 100vw;
         height: 90vw;
         background-color: white;
-        border-radius:0px 0px 30px 30px;
+        border-radius:var(--borda);
     }
 
     .cima>img{
@@ -65,6 +70,7 @@
         border: none;
         border-bottom: 2px solid var(--verde);
         font-size: 1.1em;
+        font-family: var(--fonte);
         width: 80px;
         height: 2em;
         transition: .3s;
@@ -96,6 +102,7 @@
         height: calc(100% - 90vw);
         font-size: .9em;
         text-align: center;
+        font-family: var(--fonte);
     }
 
     .login form{
@@ -118,6 +125,7 @@
         width: 100%;
         height: var(--tamanho-input);
         font-size: 1.2em;
+        font-family: var(--fonte);
 
         border: none;
         border-bottom: 1px solid var(--cinza);
@@ -156,6 +164,7 @@
         color: white;
         transition: .4s;
         font-weight: bold;
+        font-family: var(--fonte);
 
         position: absolute;
         bottom: 40px;
@@ -171,7 +180,10 @@
 
 @media screen and (600px <= width) {
     body{
-        background-image: linear-gradient(to right, var(--verde) 15%, var(--verde-claro) 85%);
+        background-image: linear-gradient(to right, var(--verde-escouro), var(--verde-escouro), var(--verde-escouro), var(--verde), var(--verde), var(--verde-claro), var(--verde), var(--verde), var(--verde-escouro), var(--verde-escouro), var(--verde-escouro));
+        background-size: 500% 500%;
+        animation: 7s linear infinite gradient;
+        font-family: var(--fonte);
     }/*calcio*/
 
     main{
@@ -182,7 +194,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        border-radius: 20px;
+        border-radius: var(--borda);
         box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.219);
     }
 
@@ -190,13 +202,13 @@
         width: 50%;
         height: 100%;
         float: right;
-        border-radius: 30px 20px 20px 30px;
+        border-radius: var(--borda);
     }
 
     .cima img{
         transform: translate(-50%, -90%);
     }
-
+    
     .cima div#cima{
         display: none;
     }
@@ -229,6 +241,7 @@
         height: 100%;
         width: 50%;
         float: left;
+        font-family: var(--fonte);
     }
 
     .login form{
@@ -239,6 +252,7 @@
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
+        font-family: var(--fonte);
     }
 
     .login .for{
@@ -248,15 +262,18 @@
         flex-flow: column nowrap;
         align-items: center;
         transform: translateY(-40px);
+        font-family: var(--fonte);
     }
 
     .login input{
         width: 90%;
+        font-family: var(--fonte);
     }
 
     .login button{
         width: 40%;
         left: 23.5%;
+        font-family: var(--fonte);
     }
 }
 
@@ -271,5 +288,31 @@
 
     main{
         display: none;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    20% {
+        background-position: 20% 50%;
+    }
+
+    40% {
+        background-position: 40% 50%;
+    }
+
+    60% {
+        background-position: 60% 50%;
+    }
+
+    80% {
+        background-position: 80% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
     }
 }
