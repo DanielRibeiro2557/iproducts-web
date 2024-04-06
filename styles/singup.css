@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+
+@media all {
+    .cima button#login{
+        border-bottom: 2px solid transparent;
+        position: absolute;
+        
+        text-align: center;
+        bottom: 0;
+        right: var(--largura-login);
+    }
+
+    .cima button#login:hover{
+        border-bottom: 2px solid var(--verde);
+    }
+
+    .cima button#singup{
+        position: absolute;
+        border-bottom: 2px solid var(--verde);
+        bottom: 0;
+        right: var(--largura-login);
+    }
+
+    .login form{
+        justify-content: space-between;
+    }
+}
+
+@media screen and (600px <= width) {
+    .cima{
+        float: left;
+        border-radius: 20px 30px 30px 20px;
+    }
+
+    .login{
+        float: right;
+    }
+
+    .login .for{
+        transform: translateY(10%);
+    }
+
+    .login button{
+        transform: translateX(76.5%);
+    }
+}

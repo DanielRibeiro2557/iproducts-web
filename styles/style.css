@@ -5,8 +5,9 @@
     --cinza: #9A9A9D;
     --verde: #4ECB18;
     --verde-escouro: #3f9c17;
-    --tamanho-input: 50px;
+    --verde-claro: #90fa63fd;
 
+    --tamanho-input: 50px;
     --largura-login: 35px;
 
 }
@@ -17,127 +18,257 @@
     box-sizing: border-box;
 }
 
-main {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--cinza-claro);
-    height: 100vh;
-    width: 100vw;
+@media all {
+    body{
+        width: 100vw;
+        height: 100vh;
+    }
+
+    h1{
+        display: none;
+    }
+
+    main {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--cinza-claro);
+        height: 100vh;
+        width: 100vw;
+        transition: width .3s, height .3s;
+        transition-timing-function: ease;
+    }
+
+    .cima{
+        position: relative;
+        width: 100vw;
+        height: 90vw;
+        background-color: white;
+        border-radius:0px 0px 30px 30px;
+    }
+
+    .cima>img{
+        width: 170px;
+        height: 170px;
+        position: absolute;
+        border-radius: 50%;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .cima div#baixo{
+        display: none;
+    }
+
+    .cima button{
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid var(--verde);
+        font-size: 1.1em;
+        width: 80px;
+        height: 2em;
+        transition: .3s;
+        padding: 5px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .cima button#login{
+        position: absolute;
+        bottom: 0;
+        left: var(--largura-login);
+    }
+
+    .cima button#singup{
+        border-bottom: 2px solid transparent;
+        position: absolute;
+        
+        text-align: center;
+        bottom: 0;
+        right: var(--largura-login);
+    }
+
+    .cima button#singup:hover{
+        border-bottom: 2px solid var(--verde);
+    }
+
+    .login{
+        height: calc(100% - 90vw);
+        font-size: .9em;
+        text-align: center;
+    }
+
+    .login form{
+        width: 100vw;
+        height: 100%;
+        padding: 20px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .login label{
+        position: absolute;
+        display: none;
+    }
+
+    .login input{
+        margin: 10px;
+        width: 100%;
+        height: var(--tamanho-input);
+        font-size: 1.2em;
+
+        border: none;
+        border-bottom: 1px solid var(--cinza);
+        position: relative;
+        transform: translate(-10px);
+        outline: 0;
+
+        background-color: transparent;
+    }
+
+    .login input::placeholder{
+        font-size: .8em;
+    }
+
+    .login input:focus{
+        border-bottom: 2px solid var(--cinza);
+    }
+
+    .login a{
+        text-decoration: none;
+        color: var(--verde);
+        transition: .5s;
+    }
+
+    .login a:hover{
+        color: var(--verde-escouro);
+        text-decoration: underline;
+    }
+
+    .login button{
+        width: 90%;
+        height: 50px;
+        border-radius: 20px;
+        background-color: var(--verde);
+        border: none;
+        color: white;
+        transition: .4s;
+        font-weight: bold;
+
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .login button:hover{
+        background-color: var(--verde-escouro);
+        cursor: pointer;
+    }
 }
 
-.cima{
-    position: relative;
-    width: 100vw;
-    height: 90vw;
-    background-color: white;
-    border-radius:0px 0px 30px 30px;
-}
+@media screen and (600px <= width) {
+    body{
+        background-image: linear-gradient(to right, var(--verde) 15%, var(--verde-claro) 85%);
+    }
 
-.cima>img{
-    width: 170px;
-    height: 170px;
-    position: absolute;
-    border-radius: 50%;
+    main{
+        width: 80vw;
+        height: 60vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 20px;
+        box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.219);
+    }
 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+    .cima {
+        width: 50%;
+        height: 100%;
+        float: right;
+        border-radius: 30px 20px 20px 30px;
+    }
 
-.cima button{
-    background-color: transparent;
-    border: none;
-    border-bottom: 2px solid var(--verde);
-    font-size: 1.1em;
-    width: 80px;
-    transition: .3s;
-    padding: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
+    .cima img{
+        transform: translate(-50%, -90%);
+    }
 
-.cima button#login{
-    position: absolute;
-    bottom: 0;
-    left: var(--largura-login);
-}
-
-.cima button#singup{
-    border-bottom: 2px solid transparent;
-    position: absolute;
+    .cima div#cima{
+        display: none;
+    }
     
-    text-align: center;
-    bottom: 0;
-    right: var(--largura-login);
+    .cima div#baixo{
+        display: block;
+    }
+
+    .cima div#baixo button{
+        height: 50px;
+        width: 70%;
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        border-bottom: 2px solid transparent;
+        border-radius: 20px;
+        background-color: var(--verde);
+        color: white;
+        font-size: .9em;
+    }
+
+    .cima div#baixo button:hover{
+        background-color: var(--verde-escouro);
+        cursor: pointer;
+    }
+
+    .login{
+        height: 100%;
+        width: 50%;
+        float: left;
+    }
+
+    .login form{
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login .for{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-flow: column nowrap;
+        align-items: center;
+        transform: translateY(-40px);
+    }
+
+    .login input{
+        width: 90%;
+    }
+
+    .login button{
+        width: 40%;
+        left: 23.5%;
+    }
 }
 
-.cima button#singup:hover{
-    border-bottom: 2px solid var(--verde);
-}
+@media print {
+    h1{
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
-.login{
-    height: calc(100% - 90vw);
-    font-size: .9em;
-    text-align: center;
-}
-
-.login form{
-    width: 100vw;
-    height: 100%;
-    padding: 20px;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
-}
-
-.login label{
-    position: absolute;
-    display: none;
-}
-
-.login input{
-    margin: 10px;
-    width: 100%;
-    height: var(--tamanho-input);
-    font-size: 1.2em;
-
-    border: none;
-    border-bottom: 1px solid var(--cinza);
-    position: relative;
-    transform: translate(-10px);
-    outline: 0;
-
-    background-color: transparent;
-}
-
-.login input::placeholder{
-    font-size: .8em;
-}
-
-.login input:focus{
-    border-bottom: 2px solid var(--cinza);
-}
-
-.login a{
-    text-decoration: none;
-    color: var(--verde);
-    transition: .5s;
-}
-
-.login a:hover{
-    color: var(--verde-escouro);
-}
-
-.login button{
-    width: 100%;
-    height: 50px;
-    border-radius: 20px;
-    background-color: var(--verde);
-    border: none;
-    color: white;
-    transition: .4s;
-}
-
-.login button:hover{
-    background-color: var(--verde-escouro);
-    cursor: pointer;
+    main{
+        display: none;
+    }
 }
