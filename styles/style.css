@@ -176,6 +176,7 @@
 
     main{
         width: 80vw;
+        max-width: 800px;
         height: 60vh;
         position: absolute;
         top: 50%;
