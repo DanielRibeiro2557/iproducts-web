@@ -180,9 +180,6 @@
 
 @media screen and (600px <= width) {
     body{
-        background-image: linear-gradient(to right, var(--verde-escouro), var(--verde-escouro), var(--verde-escouro), var(--verde), var(--verde), var(--verde-claro), var(--verde), var(--verde), var(--verde-escouro), var(--verde-escouro), var(--verde-escouro));
-        background-size: 500% 500%;
-        animation: 7s linear infinite gradient;
         font-family: var(--fonte);
     }/*calcio*/
 
@@ -288,31 +285,5 @@
 
     main{
         display: none;
-    }
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    20% {
-        background-position: 20% 50%;
-    }
-
-    40% {
-        background-position: 40% 50%;
-    }
-
-    60% {
-        background-position: 60% 50%;
-    }
-
-    80% {
-        background-position: 80% 50%;
-    }
-
-    100% {
-        background-position: 100% 50%;
     }
 }
