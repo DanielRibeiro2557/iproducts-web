@@ -27,7 +27,7 @@
     }
 }
 
-@media screen and (600px <= width) {
+@media screen and (460px <= width) {
     .cima{
         float: left;
         border-radius: 20px 30px 30px 20px;

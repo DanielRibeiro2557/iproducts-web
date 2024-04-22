@@ -30,6 +30,10 @@
         font-family: var(--fonte);
     }
 
+    body::-webkit-scrollbar{
+        display: none;
+    }
+
     h1{
         display: none;
     }
@@ -47,7 +51,7 @@
         width: 100vw;
         height: 90vw;
         background-color: white;
-        border-radius:var(--borda);
+        border-radius: 0px 0px 30px 30px;
     }
 
     .cima>img{
@@ -79,13 +83,13 @@
         font-weight: bold;
     }
 
-    .cima button#login{
+    .cima button#login-button{
         position: absolute;
         bottom: 0;
         left: var(--largura-login);
     }
 
-    .cima button#singup{
+    .cima button#singup-button{
         border-bottom: 2px solid transparent;
         position: absolute;
         
@@ -94,33 +98,51 @@
         right: var(--largura-login);
     }
 
-    .cima button#singup:hover{
+    .cima button#singup-button:hover{
         border-bottom: 2px solid var(--verde);
     }
 
-    .login{
+    .cima button#login-button:hover{
+        border-bottom: 2px solid var(--verde);
+    }
+
+    .log{
         height: calc(100% - 90vw);
         font-size: .9em;
         text-align: center;
         font-family: var(--fonte);
+        width: 100vw;
     }
 
-    .login form{
+    #login{
+        display: block;
+    }
+
+    #signup{
+        display: none;
+        position: absolute;
+        top: 46.5%;
+    }
+
+    .log form{
         width: 100vw;
         height: 100%;
         padding: 20px;
         display: flex;
+    }
+
+    #login form{
         flex-flow: column nowrap;
         justify-content: space-around;
         align-items: flex-start;
     }
 
-    .login label{
+    .log label{
         position: absolute;
         display: none;
     }
 
-    .login input{
+    .log input{
         margin: 10px;
         width: 100%;
         height: var(--tamanho-input);
@@ -136,26 +158,26 @@
         background-color: transparent;
     }
 
-    .login input::placeholder{
+    .log input::placeholder{
         font-size: .8em;
     }
 
-    .login input:focus{
+    .log input:focus{
         border-bottom: 2px solid var(--cinza);
     }
 
-    .login a{
+    .log a{
         text-decoration: none;
         color: var(--verde);
         transition: .5s;
     }
 
-    .login a:hover{
+    .log a:hover{
         color: var(--verde-escouro);
         text-decoration: underline;
     }
 
-    .login button{
+    .log button{
         width: 90%;
         height: 50px;
         border-radius: 20px;
@@ -172,13 +194,13 @@
         transform: translateX(-50%);
     }
 
-    .login button:hover{
+    .log button:hover{
         background-color: var(--verde-escouro);
         cursor: pointer;
     }
 }
 
-@media screen and (600px <= width) {
+@media screen and (460px <= width) {
     body{
         font-family: var(--fonte);
     }/*calcio*/
@@ -234,14 +256,14 @@
         cursor: pointer;
     }
 
-    .login{
+    .log {
         height: 100%;
         width: 50%;
         float: left;
         font-family: var(--fonte);
     }
 
-    .login form{
+    .log form{
         width: 100%;
         height: 100%;
         padding: 20px;
@@ -252,7 +274,7 @@
         font-family: var(--fonte);
     }
 
-    .login .for{
+    .log .for{
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -262,12 +284,12 @@
         font-family: var(--fonte);
     }
 
-    .login input{
+    .log input{
         width: 90%;
         font-family: var(--fonte);
     }
 
-    .login button{
+    .log button{
         width: 40%;
         left: 23.5%;
         font-family: var(--fonte);
@@ -286,4 +308,8 @@
     main{
         display: none;
     }
+}
+
+@keyframes muda {
+    
 }

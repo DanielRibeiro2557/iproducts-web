@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem-vindo</title>
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Criar conta</title>
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/singup.css">
 </head>
 <body>
     <h1>Este site não pode ser impresso</h1>
     <main>
         <section class="cima">
-            <img src="assets/images/iproducts-logo.png" alt="">
+            <img src="../assets/images/iproducts-logo.png" alt="">
             <div id="cima">
-                <button id="login">login</button>
-                <a href="singup.html"><button id="singup">Singup</button></a>
+                <a href="login.html"><button id="login">login</button></a>
+                <button id="singup">Singup</button>
             </div>
             <div id="baixo">
-                <a href="singup.html"><button>Criar conta</button></a>
+                <a href="login.html"><button>Entrar</button></a>
             </div>
         </section>
         <section class="login">
@@ -26,11 +27,11 @@
                     <label for="email">E-mail</label>
                     <input type="email" id="iemail" name="email"placeholder="E-mail" required autocomplete="email">
                     <label for="senha">Senha</label>
-                    <input type="password" id="isenha" name="senha" placeholder="Senha" required autocomplete="current-password">
-                    <a href="#">Esqueci minha senha</a>
+                    <input type="password" id="isenha" name="senha" placeholder="Senha" required autocomplete="new-password">
+                    <input type="password" name="confsenha" id="iconfsenha" placeholder="Confirmar senha" required autocomplete="new-password">
                 </div>
                 <div class="but">
-                    <button>Entrar</button>
+                    <button>Criar conta</button>
                 </div>
             </form>
         </section>
