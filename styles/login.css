@@ -189,7 +189,7 @@
         font-family: var(--fonte);
 
         position: absolute;
-        bottom: 40px;
+        bottom: 20px;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -256,6 +256,26 @@
         cursor: pointer;
     }
 
+    #signup{
+        display: none;
+        right: 0;
+        top: 0;
+        width: 50%;
+    }
+
+    #signup button{
+        width:80%;
+        left: 50%;
+    }
+
+    #login-button-large{
+        display: none;
+    }
+
+    #signup-button-large{
+        display: block;
+    }
+
     .log {
         height: 100%;
         width: 50%;
@@ -274,6 +294,10 @@
         font-family: var(--fonte);
     }
 
+    #login form{
+        justify-content: center;
+    }
+
     .log .for{
         width: 100%;
         display: flex;
@@ -290,6 +314,8 @@
     }
 
     .log button{
+        display: block;
+        bottom: 40px;
         width: 40%;
         left: 23.5%;
         font-family: var(--fonte);
@@ -308,8 +334,4 @@
     main{
         display: none;
     }
-}
-
-@keyframes muda {
-    
 }
