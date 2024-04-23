@@ -4,23 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bem-vindo</title>
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../styles/login.css">
 </head>
 <body>
     <h1>Este site não pode ser impresso</h1>
     <main>
-        <section class="cima">
-            <img src="assets/images/iproducts-logo.png" alt="">
+        <section class="cima" id="cima">
+            <img src="../assets/images/iproducts-logo.png" alt="">
             <div id="cima">
-                <button id="login">login</button>
-                <a href="singup.html"><button id="singup">Singup</button></a>
+                <button id="login-button">login</button>
+                <button id="singup-button">Singup</button>
             </div>
             <div id="baixo">
-                <a href="singup.html"><button>Criar conta</button></a>
+                <button id="signup-button-large">Criar conta</button>
+                <button id="login-button-large">Entrar</button>
             </div>
         </section>
-        <section class="login">
+        <section class="log" id="login">
             <form method="post">
                 <div class="for">
                     <label for="email">E-mail</label>
@@ -34,6 +35,21 @@
                 </div>
             </form>
         </section>
+        <section class="log" id="signup">
+            <form method="post">
+                <div class="for">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="iemail" name="email"placeholder="E-mail" required autocomplete="email">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="isenha" name="senha" placeholder="Senha" required autocomplete="new-password">
+                    <input type="password" name="confsenha" id="iconfsenha" placeholder="Confirmar senha" required autocomplete="new-password">
+                </div>
+                <div class="but">
+                    <button>Criar conta</button>
+                </div>
+            </form>
+        </section>
     </main>
+    <script src="../js/main.js"></script>
 </body>
 </html>
